@@ -1,0 +1,9 @@
+node_modules
+
+bannerConfig/
+bannerConfig.zip
+langJson.zip
+credentials/
+
+translationData/
+/workspace/
