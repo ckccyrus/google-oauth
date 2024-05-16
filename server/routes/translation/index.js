@@ -12,12 +12,11 @@ let _isTranslationReady = true;
 
 const update = async () => {
     const _fetchData = new FetchData();
-    const _data = await _fetchData.init();
+    await _fetchData.init();
+    const _data = _fetchData.getResult();
 
-    // Messenger.log(_data);
-
-    // const _createFolder = new CreateFolder(_data);
-    // _createFolder.init();
+    const _createFolder = new CreateFolder(_data);
+    _createFolder.init();
 }
 
 //Auto update in 1 hour
