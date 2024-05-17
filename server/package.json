@@ -4,7 +4,8 @@
   "description": "This is a nodejs application for hosting API and connecting with Google by oauth",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon app.js"
+    "test": "nodemon app.js",
+    "build": "node app.js"
   },
   "author": "",
   "license": "ISC",
