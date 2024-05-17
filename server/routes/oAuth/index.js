@@ -9,7 +9,7 @@ const Messenger = require(`${appRoot}/utils/messenger`);
 const { CONFIG } = require("./CONFIG");
 
 // Download OAuth2 configuration from the Google 
-const clientSecret = require("../../credentials/client_secret.json");
+// const clientSecret = require("../../credentials/client_secret.json");
 
 
 class OAuth {
@@ -69,9 +69,12 @@ class OAuth {
             // create an oAuth client to authorize the API call.  Secrets are kept in a `client_secret.json` file,
             // which should be downloaded from the Google Developers Console.
             const oAuth2Client = new OAuth2Client(
-                clientSecret.web.client_id,
-                clientSecret.web.client_secret,
-                clientSecret.web.redirect_uris,
+                // clientSecret.web.client_id,
+                // clientSecret.web.client_secret,
+                // clientSecret.web.redirect_uris,
+                process.env.GOOGLE_OAUTH_CLIENT_ID,
+                process.env.GOOGLE_OAUTH_CLIENT_SECRET,
+                process.env.GOOGLE_OAUTH_REDIRECT_URLS
             );
 
             // Generate the url that will be used for the consent dialog.

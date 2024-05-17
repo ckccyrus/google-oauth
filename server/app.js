@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const routes = require('./routes');
 const OAuth = require('./routes/oAuth')
+require('dotenv').config()
+
 
 async function main() {
     const _oAuth = OAuth.getInstance();
